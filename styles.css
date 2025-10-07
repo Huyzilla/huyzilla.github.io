@@ -1,0 +1,444 @@
+/*default*/
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: hsl(222, 29%, 38%);
+    --main-gray: #303841;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+}
+
+body {
+    background-image: url('image/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.content-wrapper {
+    background-color: rgba(29, 38, 51, 0.9); 
+}
+
+/* USER STORY #12: Navbar luôn ở trên cùng của viewport */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-red);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+#navbar a {
+    display: block;
+    padding: 2rem;
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 2.2rem;
+}
+
+#navbar a:hover {
+    background-color: var(--main-blue);
+}
+
+/* USER STORY #10: Chiều cao của welcome section bằng chiều cao viewport */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#welcome-section h1 {
+    font-size: 4.5rem;
+}
+
+#welcome-section p {
+    font-size: 3rem;
+    color: var(--main-red);
+    font-style: italic;
+}
+
+#welcome-section .welcome-subtitle {
+    font-size: 1.5rem;                      /* Giảm nhẹ kích thước để tạo sự phân cấp */
+    font-weight: 300;                       /* Giữ nguyên font chữ mảnh */
+    font-style: normal;
+    color: #dcdfe6;                         /* Màu chữ hơi xám hơn để dịu mắt */
+    margin-top: 1.5rem;                     /* Tăng khoảng cách với dòng trên */
+    
+    letter-spacing: 1.5px;                  /* Tăng khoảng cách giữa các chữ cái */
+    text-transform: uppercase;              /* VIẾT HOA toàn bộ chữ */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Thêm bóng mờ để chữ nổi bật hơn */
+    
+    text-align: center;             
+}
+
+#projects {
+    padding: 10rem 2rem;
+    background-color: transparent;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 4.2rem;
+    margin: 0 auto 6rem auto;
+    max-width: 640px;
+    border-bottom: 2px solid var(--main-white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.project-tile {
+    background-color: var(--main-gray);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--main-white);
+    transition: transform 0.3s ease-out;
+}
+.project-tile:hover {
+    transform: translateY(-5px); /* Hiệu ứng khi di chuột qua */
+}
+
+.project-tile img {
+    width: 100%;
+    height: calc(100% - 7rem);
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.project-title {
+    padding: 2rem 0.5rem;
+    font-size: 2rem;
+}
+
+.btn-show-all {
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-gray);
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+.btn-show-all:hover {
+    background-color: var(--main-red);
+}
+
+#contact {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 4.5rem;
+}
+#contact p {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.contact-links {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: var(--main-white);
+    margin: 0 1.5rem;
+    transition: transform 0.3s;
+}
+.contact-links a:hover {
+    transform: translateY(8px);
+}
+
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--main-gray);
+    border-top: 4px solid var(--main-red);
+}
+
+/* USER STORY #11: Sử dụng ít nhất một media query */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%; /* Giảm cỡ chữ trên màn hình nhỏ */
+    }
+
+    #welcome-section h1 {
+        font-size: 4rem;
+    }
+
+    #projects h2 {
+        font-size: 3.2rem;
+    }
+
+    #contact h2 {
+        font-size: 4rem;
+    }
+}
+
+#journey {
+    background-color: transparent; /* Hoặc màu nền bạn muốn */
+    padding: 10rem 2rem;
+    text-align: center;
+}
+
+#journey h2 {
+    font-size: 4.2rem;
+    margin-bottom: 6rem;
+    border-bottom: 2px solid var(--main-white);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Đường kẻ dọc chính giữa timeline */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--main-white);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Các mục trên timeline (trái và phải) */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Vòng tròn trên trục thời gian */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-red);
+    border: 4px solid #f0f0f0;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -14px;
+}
+
+/* Mục bên trái */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+/* Mục bên phải */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -14px; /* Điều chỉnh vị trí vòng tròn */
+}
+
+/* Nội dung bên trong mỗi mục */
+.timeline-content {
+    padding: 20px 30px;
+    background-color: #2a3447; /* Màu nền cho nội dung */
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--main-red);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--main-white);
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 5px 0 10px 0;
+    color: #c8d1e0;
+}
+
+/* === Xử lý cho màn hình nhỏ (Responsive) === */
+@media screen and (max-width: 768px) {
+    /* Chuyển đường kẻ về bên trái */
+    .timeline-container::after {
+        left: 31px;
+    }
+
+    /* Tất cả các mục sẽ nằm bên phải */
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        text-align: left !important;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    /* Đặt vòng tròn lên đường kẻ bên trái */
+    .timeline-item::after {
+        left: 17px;
+    }
+}
+
+/* Projects */
+.project-details-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: transparent;
+    color: #c8d1e0; 
+    padding: 60px 20px;
+    font-size: 1.1rem;
+}
+
+.project-details-content {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(42, 52, 71, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #45567d;
+}
+
+.project-details-content h1 {
+    font-size: 2.5rem;
+    color: var(--main-white);
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: none;
+}
+
+.project-details-content h2 {
+    font-size: 1.6rem;
+    color: var(--main-white);
+    border-bottom: 3px solid var(--main-red);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.project-details-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 3px solid #45567d;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+    justify-content: center; 
+}
+
+.tech-list li {
+    list-style: none;
+    background: #45567d;
+    color: var(--main-white);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-github {
+    display: inline-block;
+    background: var(--main-red);
+    color: var(--main-white);
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-github:hover {
+    background: #a02837;
+    transform: translateY(-2px);
+}
+
+.source-code-wrapper {
+    text-align: center; 
+}
+
+h2 {
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án: Drowsiness Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="project-details-container">
+        <div class="project-details-content">
+            <h1>Hệ thống phát hiện sự mệt mỏi của tài xế</h1>
+            
+            <img class="project-image" src="image/Drowsiness_Image.png" alt="Demo Image">
+            
+            <h2>Mô tả dự án</h2>
+            <p>
+                Đây là hệ thống AI thời gian thực giúp phát hiện sự mệt mỏi của tài xế bằng cách kết hợp phân tích điểm mốc trên khuôn mặt và nhận dạng tư thế.
+            </p>
+
+            <h2>Các tính năng chính</h2>
+            <ul>
+                <li>Sử dụng MediaPipe để tính toán các chỉ số EAR (độ nhắm của mắt) và MAR (độ mở của miệng khi ngáp).</li>
+                <li>Áp dụng mô hình YOLO để phát hiện các tư thế đầu cho thấy sự mệt mỏi.</li>
+                <li>Phát triển cơ chế cảnh báo, kích hoạt khi các chỉ số mệt mỏi kéo dài trong nhiều khung hình liên tiếp.</li>
+            </ul>
+
+            <h2>Công nghệ sử dụng</h2>
+                <ul class="tech-list">
+                    <li>Python</li>
+                    <li>OpenCV</li>
+                    <li>MediaPipe</li>
+                    <li>YOLO</li>
+                    <li>PyTorch</li>
+                </ul>
+            <div class="source-code-wrapper">
+                <a href="https://github.com/Huyzilla/Drowsiness_Detection" class="btn-github" target="_blank">
+                Source code
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

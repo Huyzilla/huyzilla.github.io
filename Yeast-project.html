@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án: Automated Yeast Analysis System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="project-details-container">
+        <div class="project-details-content">
+            <h1>Hệ thống tự động phân tích nấm men trong môi trường Ethanol</h1>
+            <img class="project-image" src="image/Image.png" alt="Demo image">
+            <h2>Mô tả dự án</h2>
+            <p>
+                Đây là một hệ thống web ứng dụng trí tuệ nhân tạo cho việc phân đoạn và phân tích tế bào nấm men trong môi trường ethanol. Dự án được thực hiện trong thời gian thực tập tại <strong>Phòng thí nghiệm Tin sinh học (Bioinformatics Lab), Đại học Bách Khoa Hà Nội</strong>, dưới sự hướng dẫn của <strong>TS. Nguyễn Hồng Quang</strong>.
+            </p>
+
+            <h2>Vai trò và đóng góp</h2>
+            <ul> 
+                <li>Phát triển mô hình deep learning (U-Net) để phân đoạn (segment) các tế bào nấm men từ ảnh hiển vi.</li>
+                <li>Thiết kế thuật toán, phát triển mô hình để đếm và gán các tế bào nấm men vào đúng các ô trong buồng đếm 16 ô.</li>
+                <li>Trích xuất các thông số hình thái của từng tế bào (diện tích, chu vi, độ tròn) để phục vụ cho việc phân tích sâu hơn.</li>
+                <li>Xây dựng REST APIs bằng FastAPI để cung cấp khả năng dự đoán của mô hình và đóng gói ứng dụng bằng Docker.</li>
+            </ul>
+
+            <h2>Công nghệ sử dụng</h2>
+                <ul class="tech-list">
+                    <li>PyTorch</li><li>OpenCV</li><li>FastAPI</li><li>Docker</li><li>NumPy</li><li>scikit-image</li>
+                </ul>
+            <div class="source-code-wrapper">
+                <a href="https://github.com/Huyzilla/BionformaticsLab" class="btn-github" target="_blank">
+                Source code
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
